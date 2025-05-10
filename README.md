@@ -9,11 +9,11 @@ Command-line tool for importing brokerage statements into a database.
 ## Setup
 
 Install the binary as below.  Consider making a shell alias for this
-command (e.g. `alias bsi='cargo run --release --bin brokerage-statement-importer'`)
+command (e.g. `alias bsi='cargo run --release --bin brokerage-statement-importer-cli'`)
 
 
 ```bash
-cargo install brokerage-statement-importer
+cargo install brokerage-statement-importer-cli
 ```
 
 ## Functionality
