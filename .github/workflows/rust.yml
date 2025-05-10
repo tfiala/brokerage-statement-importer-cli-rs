@@ -1,0 +1,49 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install mongosh command
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget gnupg
+        wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+        echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+        sudo apt-get update
+        sudo apt-get install -y mongodb-mongosh
+
+    - name: Cache cargo registry
+      id: cache-cargo-registry
+      uses: actions/cache@v4
+      with:
+        path: ~/.cargo
+        key: cargo-registry-${{ hashFiles('Cargo.lock') }}
+        restore-keys: cargo-registry-
+
+    - name: Build
+      run: cargo build --verbose
+
+    - name: Cache cargo registry
+      if: always()
+      uses: actions/cache@v4
+      with:
+        path: ~/.cargo
+        key: cargo-registry-${{ hashFiles('Cargo.lock') }}
+
+    - name: Run clippy
+      run: cargo clippy --all-targets --all-features -- -D warnings
+
+    - name: Run tests
+      run: cargo test --verbose

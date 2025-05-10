@@ -1,0 +1,53 @@
+<FlexQueryResponse queryName="example-query" type="AF">
+  <FlexStatements count="1">
+    <FlexStatement accountId="U1234567" fromDate="2025-04-25" toDate="2025-04-25" period="LastBusinessDay" whenGenerated="2025-04-26;13:34:28 EDT">
+      <AccountInformation accountId="U1234567" accountType="Individual" customerType="Individual" accountCapabilities="Portfolio Margin" tradingPermissions="Stocks,Options,Warrants,Forex,Futures,Crypto Currencies,Mutual Funds,Fully Paid Stock Loan" />
+      <Trades>
+          <Trade accountId="U1234567"
+                  currency="USD"
+                  symbol="ARGX"
+                  conid="276343981"
+                  listingExchange="NASDAQ"
+                  tradeID="7587063231"
+                  reportDate="2025-04-25"
+                  dateTime="2025-04-25;10:19:55 EDT"
+                  tradeDate="2025-04-25"
+                  transactionType="ExchTrade"
+                  exchange="BYX"
+                  quantity="1"
+                  tradePrice="606.57"
+                  tradeMoney="606.57"
+                  proceeds="-606.57"
+                  ibCommission="-1.000035"
+                  ibCommissionCurrency="USD"
+                  netCash="-607.570035"
+                  closePrice="614.76"
+                  openCloseIndicator="O"
+                  cost="607.570035"
+                  fifoPnlRealized="0"
+                  mtmPnl="8.19"
+                  origTradePrice="0"
+                  origTradeDate=""
+                  origTradeID=""
+                  origOrderID="0"
+                  origTransactionID="0"
+                  buySell="BUY"
+                  ibOrderID="4015030800"
+                  transactionID="32580112485"
+                  ibExecID="0000edae.680b59d1.01.01"
+                  orderTime="2025-04-25;10:19:55 EDT"
+                  openDateTime=""
+                  holdingPeriodDateTime=""
+                  whenRealized=""
+                  whenReopened=""
+                  orderType="LMT"
+                  accruedInt="0"
+                  assetCategory="STK"
+                  brokerageOrderID="002ce642.00014b44.680b0ed6.0001"
+                  orderReference=""
+                  isAPIOrder="N"
+                  initialInvestment="" />
+      </Trades>
+    </FlexStatement>
+  </FlexStatements>
+</FlexQueryResponse>
