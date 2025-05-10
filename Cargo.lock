@@ -299,9 +299,9 @@ dependencies = [
 
 [[package]]
 name = "brokerage-db"
-version = "0.2.5"
+version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "03cbe89053e96eb833dd71f198cdad4f967382fced6afa76bdda79893ccb9ec2"
+checksum = "a0719d1dbf344887f37e5d7323b49264ac9a2a3482cb5a8dcc483102d10f5f86"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -317,9 +317,9 @@ dependencies = [
 
 [[package]]
 name = "brokerage-statement-importer"
-version = "0.2.5"
+version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30a6e1f394f6e346ed081e4df4fffcd2003be7b4342805947fea4dc0b61a451a"
+checksum = "1159ad652ee57c26243d713a770ef26a14ff4a13c168b79d7ace3fbd9f2b8c2b"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -336,7 +336,7 @@ dependencies = [
 
 [[package]]
 name = "brokerage-statement-importer-cli"
-version = "0.1.3"
+version = "0.1.4"
 dependencies = [
  "anyhow",
  "brokerage-db",
